@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSIS — Criminal Study Intelligent System</title>
+  <style>
+    :root {
+      --bg:       #f0f4f9;
+      --card:     #ffffff;
+      --border:   #dde3ed;
+      --blue:     #1e40af;
+      --blue2:    #2563eb;
+      --text:     #0f172a;
+      --radius:   14px;
+      --shadow-lg:0 8px 32px rgba(30,64,175,0.13);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      padding: 1.5rem;
+    }
+
+    /* ─── VIDEO ──────────────────────────────────────── */
+    .video-card {
+      width: 100%;
+      max-width: 1060px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.6rem;
+      box-shadow: var(--shadow-lg);
+    }
+    .video-card video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1680 / 720;
+      max-height: calc(100vh - 4.5rem);
+      border-radius: 10px;
+      background: var(--text);
+      accent-color: var(--blue2);
+    }
+    @media (max-width: 760px) {
+      body { padding: 0.75rem; }
+      .video-card { padding: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════ VIDEO -->
+<div class="video-card">
+  <video src="mp.mp4" controls playsinline preload="metadata"></video>
+</div>
+
+</body>
+</html>
